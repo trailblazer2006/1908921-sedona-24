@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+.features {
+  background-color: $color-white;
+  color: $color-black;
+  padding: 0 21px;
+}
+
+.features__item {
+  display: grid;
+  grid-template-columns: 49px auto;
+  align-items: center;
+  padding-top: 26px;
+
+  &:last-child {
+    padding-bottom: 35px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.features__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.features__description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  grid-column: 2 / -1;
+}
+
+.features__item--accommodation {
+  &::before {
+    width: 39px;
+    height: 37px;
+    background-image: url("../img/icon-house.svg");
+  }
+}
+
+.features__item--souvenirs {
+  &::before {
+    width: 32px;
+    height: 38px;
+    background-image: url("../img/icon-gift.svg");
+  }
+}
+
+.features__item--food {
+  &::before {
+    width: 40px;
+    height: 35px;
+    background-image: url("../img/icon-burger.svg");
+  }
+}

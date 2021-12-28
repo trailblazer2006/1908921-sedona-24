@@ -1,0 +1,11 @@
+.page-header {
+  height: 56px;
+}
+
+.page-header__logo {
+  position: absolute;
+  transform: translateX(-50%);
+  top: 0;
+  left: 50%;
+  z-index: 1;
+}
