@@ -18,9 +18,6 @@
 
   &::before {
     display: block;
-    content: "";
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
 
@@ -43,24 +40,24 @@
 
 .features__item--accommodation {
   &::before {
+    content: url("../img/icon-house.svg");
     width: 39px;
     height: 37px;
-    background-image: url("../img/icon-house.svg");
   }
 }
 
 .features__item--souvenirs {
   &::before {
+    content: url("../img/icon-gift.svg");
     width: 32px;
     height: 38px;
-    background-image: url("../img/icon-gift.svg");
   }
 }
 
 .features__item--food {
   &::before {
+    content: url("../img/icon-burger.svg");
     width: 40px;
     height: 35px;
-    background-image: url("../img/icon-burger.svg");
   }
 }

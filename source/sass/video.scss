@@ -1,0 +1,24 @@
+@import "variables.scss";
+
+.video {
+  padding: 32px 0 49px;
+}
+
+.video__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 28px;
+}
+
+.video__description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-primary;
+  padding: 24px 38px 33px;
+}

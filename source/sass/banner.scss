@@ -1,24 +1,40 @@
 .banner {
   position: relative;
-  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  height: 389px;
+  background-position: bottom;
 
   &::after {
     position: absolute;
-    content: "";
     display: block;
-    background-image: url("../img/intro-triangle.svg");
+    content: url("../img/intro-triangle.svg");
     width: 100%;
     height: 57px;
-    bottom: -1px;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    bottom: 0;
   }
 }
 
 .banner__image {
-  padding-top: 90px;
   margin: auto;
+}
+
+.page-main {
+  .banner {
+    background-image: url("../img/back-mobile.jpg");
+    height: 389px;
+  }
+
+  .banner__image {
+    padding-top: 90px;
+  }
+}
+
+.page-catalog {
+  .banner {
+    background-image: url("../img/back-desktop.jpg");
+    height: 155px;
+  }
+
+  .banner__image {
+    padding-top: 40px;
+  }
 }

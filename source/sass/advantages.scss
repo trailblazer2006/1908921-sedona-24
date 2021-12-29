@@ -37,11 +37,8 @@
 
   &::before {
     display: block;
-    content: "";
+    content: url("../img/white-triange.svg");
     height: 37px;
-    background-image: url("../img/white-triange.svg");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   .advantages__title {
