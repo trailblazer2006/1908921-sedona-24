@@ -57,7 +57,9 @@
   white-space: nowrap;
 }
 
-.review__input, .review__tel, .review__email {
+.review__input,
+.review__tel,
+.review__email {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -89,7 +91,8 @@
   }
 }
 
-.review__tel, .review__email {
+.review__tel,
+.review__email {
   padding-right: 58px;
   width: 100%;
 }
