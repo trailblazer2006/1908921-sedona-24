@@ -1,0 +1,205 @@
+@import "variables.scss";
+
+.review {
+  padding-top: 36px;
+}
+
+.review__form {
+  padding-bottom: 48px;
+}
+
+.review__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 8px 0;
+}
+
+.review__text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-primary;
+  margin: 36px 8px 16px;
+}
+
+.review__fieldset {
+  border-top: 1px solid $color-border;
+}
+
+.review__legend {
+  padding: 20px 0 19px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.review__list {
+  padding-bottom: 15px;
+}
+
+.review__item {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.review__label {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $color-primary;
+  white-space: nowrap;
+}
+
+.review__input, .review__tel, .review__email {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-black;
+  padding: 18px 22px 14px;
+  border: 0 none;
+  background-color: $color-controls;
+}
+
+.review__fieldset--introduction {
+  .review__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .review__label {
+    margin-right: 20px;
+  }
+
+  .review__input {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+.review__fieldset--contacts {
+  .review__label {
+    margin-left: 22px;
+  }
+}
+
+.review__tel, .review__email {
+  padding-right: 58px;
+  width: 100%;
+}
+
+.review__icon {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 58px;
+  height: 58px;
+  background-repeat: no-repeat;
+  background-color: #e6e6e6;
+  background-position: center;
+
+  &--tel {
+    background-image: url("../img/phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/mail.svg");
+  }
+}
+
+.review__radio {
+  display: none;
+
+  +
+  .review__label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      margin-right: 26px;
+      background-color: $color-controls;
+      border: 15px solid $color-controls;
+      border-radius: 50%;
+    }
+  }
+
+  &:checked + .review__label::before {
+    background-color: $color-primary;
+  }
+}
+
+.review__checkbox {
+  display: none;
+
+  +
+  .review__label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      margin-right: 26px;
+      background-color: $color-controls;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &:checked + .review__label::before {
+    background-image: url("../img/tick.svg");
+  }
+}
+
+.review__fieldset--emotions {
+  padding-left: 19px;
+  padding-right: 22px;
+}
+
+.review__textarea {
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  width: 100%;
+  height: 160px;
+  padding: 13px 21px 29px 23px;
+  border: 0 none;
+  color: $color-black;
+  background-color: $color-controls;
+  box-sizing: border-box;
+}
+
+.review__buttons {
+  padding: 51px 23px 0 19px;
+}
+
+.review__button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  height: 58px;
+  width: 100%;
+  border: 0 none;
+  color: $color-white;
+  background-color: $color-blue;
+}

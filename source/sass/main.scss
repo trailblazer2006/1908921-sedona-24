@@ -28,6 +28,28 @@ p {
   margin: 0;
 }
 
+fieldset {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  border: 0 none;
+
+  > legend {
+    float: left;
+
+    + * {
+      clear: both;
+    }
+  }
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
