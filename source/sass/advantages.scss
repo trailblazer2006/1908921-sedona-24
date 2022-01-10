@@ -1,0 +1,111 @@
+@import "variables.scss";
+
+.advantages {
+  margin: 0;
+  padding: 0;
+  background-color: $color-grey;
+}
+
+.advantages__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::after {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages--real-town {
+  background-color: $color-blue;
+  color: $color-white;
+
+  &::before {
+    display: block;
+    content: url("../img/white-triange.svg");
+    height: 37px;
+  }
+
+  .advantages__title {
+    margin-top: 34px;
+
+    &::after {
+      content: "— №1 —";
+    }
+  }
+
+  .advantages__image {
+    margin-top: 39px;
+  }
+}
+
+.advantages--devils-bridge {
+  background-color: $color-blue;
+  color: $color-white;
+  padding-top: 39px;
+
+  .advantages__title::after {
+    content: "— №2 —";
+  }
+
+  .advantages__image {
+    margin-top: 35px;
+  }
+}
+
+.advantages--compact-area {
+  padding: 26px 20px 0;
+
+  .advantages__title::after {
+    content: "— №3 —";
+  }
+
+  .advantages__description::after {
+    display: block;
+    content: "";
+    font-size: 0;
+    border-top: 1px solid $color-grey-darker;
+    padding: 0;
+    margin-top: 24px;
+  }
+}
+
+.advantages--beautiful-road {
+  padding: 26px 20px 0;
+
+  .advantages__title::after {
+    content: "— №4 —";
+  }
+
+  .advantages__description::after {
+    display: block;
+    content: "";
+    font-size: 0;
+    border-top: 1px solid $color-grey-darker;
+    padding: 0;
+    margin-top: 24px;
+  }
+}
+
+.advantages--few-tourists {
+  padding: 26px 26px 24px;
+
+  .advantages__title::after {
+    content: "— №5 —";
+  }
+}

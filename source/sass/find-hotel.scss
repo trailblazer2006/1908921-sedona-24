@@ -1,0 +1,38 @@
+@import "variables.scss";
+
+.find-hotel {
+  padding: 33px 30px 49px;
+}
+
+.find-hotel__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.find-hotel__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.find-hotel__button {
+  display: block;
+  background-color: $color-blue;
+  color: $color-white;
+  padding: 14px 32px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 28px;
+}

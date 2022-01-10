@@ -1,0 +1,70 @@
+@import "variables.scss";
+
+.player {
+  position: relative;
+  margin-bottom: 66px;
+}
+
+.player__controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  bottom: -66px;
+  width: 280px;
+}
+
+.player__slider {
+  position: relative;
+  height: 45px;
+  opacity: 0.6;
+  background:
+    url("../img/volume-scale.svg") no-repeat center,
+    $color-black;
+}
+
+.player__slider-knob {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 50%;
+  left: 76px;
+  transform: translateY(-50%);
+  background-image: url("../img/volume-slider.svg");
+  background-repeat: no-repeat;
+}
+
+.player__buttons {
+  display: flex;
+  align-items: center;
+  height: 66px;
+  background-color: $color-controls;
+}
+
+.player__button {
+  border: 0 none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__replay {
+    width: 16px;
+    height: 20px;
+    background-image: url("../img/replay.svg");
+    margin-left: 25px;
+  }
+
+  &__subtitles {
+    width: 32px;
+    height: 20px;
+    background-image: url("../img/subtitles.svg");
+    margin-left: auto;
+    margin-right: 31px;
+  }
+
+  &__fullscreen {
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/fullscreen.svg");
+    margin-right: 23px;
+  }
+}

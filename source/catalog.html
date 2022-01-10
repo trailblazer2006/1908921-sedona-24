@@ -2,24 +2,26 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
     <a class="page-header__logo">
       <img src="img/logotype-mobile.svg" width="102" height="84" alt="HTML Academy: Седона">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__button main-nav__button--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <button class="main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
       <ul class="main-nav__list">
         <li class="main-nav__list-item">
-          <a>
+          <a href="index.html">
             Главная
           </a>
         </li>
         <li class="main-nav__list-item">
-          <a href="catalog.html">
+          <a>
             Фото и видео
           </a>
         </li>
@@ -78,7 +80,9 @@
         <div class="video__player player">
           <img src="./img/video-mobile.jpg" alt="Картинка видео" class="player__image">
           <div class="player__controls">
-            <div class="player__slider"></div>
+            <div class="player__slider">
+              <div class="player__slider-knob"></div>
+            </div>
             <div class="player__buttons">
               <button class="player__button player__button__replay" type="button">
                 <span class="visually-hidden">Повторить видео</span>
@@ -96,15 +100,15 @@
     </main>
     <footer class="page-footer">
       <span class="page-footer__title">#visitSEDONA</span>
-      <ul class="page-footer__socials socials-list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
+      <ul class="page-footer__socials-list socials">
+        <li class="socials__item">
+          <a class="socials__link socials__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
+        <li class="socials__item">
+          <a class="socials__link socials__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com">Мы в Ютубе</a>
+        <li class="socials__item">
+          <a class="socials__link socials__link--youtube" href="https://www.youtube.com">Мы в Ютубе</a>
         </li>
       </ul>
       <div class="page-footer__copyright">
@@ -112,5 +116,6 @@
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
+    <script type="application/javascript" src="js/app.js"></script>
   </body>
 </html>

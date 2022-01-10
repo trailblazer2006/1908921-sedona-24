@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+.page-footer {
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 22px;
+}
+
+.page-footer__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.page-footer__socials-list {
+  margin-top: 34px;
+}
+
+.page-footer__copyright {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__copyright-text {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.page-footer__copyright-link {
+  display: block;
+  width: 27px;
+  height: 34px;
+  font-size: 0;
+  background-image: url("../img/htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
