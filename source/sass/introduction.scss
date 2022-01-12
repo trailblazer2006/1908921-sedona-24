@@ -1,5 +1,8 @@
 .introduction {
   padding: 32px 17px;
+  grid-column: 1 / -1;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .introduction__title {

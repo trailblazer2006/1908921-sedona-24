@@ -4,18 +4,31 @@
   text-align: center;
   padding-top: 28px;
   padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .page-footer__title {
-  margin: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .page-footer__socials-list {
   margin-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .page-footer__copyright {
@@ -23,6 +36,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .page-footer__copyright-text {
