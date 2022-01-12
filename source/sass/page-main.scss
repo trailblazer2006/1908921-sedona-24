@@ -1,3 +1,12 @@
+@import "variables.scss";
+
 .page-main {
   padding-bottom: 10px;
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

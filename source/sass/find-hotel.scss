@@ -1,7 +1,11 @@
 @import "variables.scss";
 
 .find-hotel {
-  padding: 33px 30px 49px;
+  padding: 33px 20px 49px;
+  max-width: 498px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  grid-column: 1 / -1;
 }
 
 .find-hotel__title {
@@ -35,4 +39,5 @@
   font-weight: bold;
   font-size: 21px;
   line-height: 28px;
+  margin-top: 27px;
 }

@@ -5,6 +5,15 @@
   position: absolute;
   z-index: 2;
   background-color: $color-blue;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    background-color: initial;
+    color: $color-blue;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .main-nav__list-item {
@@ -18,11 +27,30 @@
 
   &:first-child {
     box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+    @media (min-width: $tablet-width) {
+      box-shadow: unset;
+    }
   }
 
   a {
     color: $color-white;
     text-decoration: none;
+
+    @media (min-width: $tablet-width) {
+      color: $color-black;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+    font-size: 14px;
+    line-height: 26px;
+    box-shadow: unset;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
   }
 }
 
@@ -45,6 +73,10 @@
     background-color: $color-blue;
     background-image: url("../img/icon-cross.svg");
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav--closed {
@@ -54,6 +86,10 @@
 
   .main-nav__list-item {
     display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }
 

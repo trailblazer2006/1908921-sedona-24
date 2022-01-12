@@ -4,20 +4,35 @@
   background-color: $color-white;
   color: $color-black;
   padding: 0 21px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
 }
 
 .features__item {
   display: grid;
   grid-template-columns: 49px auto;
-  align-items: center;
   padding-top: 26px;
 
   &:last-child {
     padding-bottom: 35px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+    }
   }
 
   &::before {
     display: block;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 100%;
+    grid-template-rows: 75px auto auto;
   }
 }
 
@@ -27,6 +42,11 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding: 26px 0 26px;
+  }
 }
 
 .features__description {
@@ -36,28 +56,74 @@
   line-height: 21px;
   text-transform: uppercase;
   grid-column: 2 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-column: unset;
+    text-align: center;
+    padding-bottom: 59px;
+  }
 }
 
 .features__item--accommodation {
+  .features__description {
+    @media (min-width: $tablet-width) {
+      padding: 0 36px 59px 35px;
+    }
+  }
+
   &::before {
     content: url("../img/icon-house.svg");
     width: 39px;
     height: 37px;
+
+    @media (min-width: $tablet-width) {
+      width: 75px;
+      height: 72px;
+      margin: 0 auto;
+    }
   }
 }
 
 .features__item--souvenirs {
+  .features__description {
+    @media (min-width: $tablet-width) {
+      padding: 0 31px 59px 32px;
+    }
+  }
+
   &::before {
     content: url("../img/icon-gift.svg");
     width: 32px;
     height: 38px;
+
+    @media (min-width: $tablet-width) {
+      width: 64px;
+      height: 75px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
   }
 }
 
 .features__item--food {
+  .features__description {
+    @media (min-width: $tablet-width) {
+      padding: 0 38px 59px;
+    }
+  }
+
   &::before {
     content: url("../img/icon-burger.svg");
     width: 40px;
     height: 35px;
+
+    @media (min-width: $tablet-width) {
+      width: 76px;
+      height: 68px;
+      margin: 0 auto;
+    }
   }
 }
