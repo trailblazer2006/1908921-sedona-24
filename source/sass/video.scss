@@ -2,6 +2,11 @@
 
 .video {
   padding: 32px 0 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .video__title {
@@ -21,4 +26,6 @@
   text-transform: uppercase;
   color: $color-primary;
   padding: 24px 38px 33px;
+  max-width: 445px;
+  margin: 0 auto;
 }
