@@ -30,17 +30,17 @@
   position: relative;
   height: 45px;
   background:
-    url("../img/volume-scale.svg") no-repeat center,
+    url("../img/time-scale.svg") no-repeat center,
     rgba($color-black, 0.6);
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/volume-scale-tablet.svg");
+    background-image: url("../img/time-scale-tablet.svg");
     background-position: 93px center;
     height: 93px;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/volume-scale-desktop.svg");
+    background-image: url("../img/time-scale-desktop.svg");
   }
 }
 
@@ -52,7 +52,7 @@
   left: 76px;
   border: 0 none;
   transform: translateY(-50%);
-  background-image: url("../img/volume-slider.svg");
+  background-image: url("../img/time-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: unset;
