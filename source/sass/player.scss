@@ -50,9 +50,13 @@
   height: 13px;
   top: 50%;
   left: 76px;
+  border: 0 none;
   transform: translateY(-50%);
   background-image: url("../img/volume-slider.svg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-color: unset;
+  background-size: 13px 13px;
 
   @media (min-width: $tablet-width) {
     left: 204px;
