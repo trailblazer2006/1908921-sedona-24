@@ -12,23 +12,20 @@
 }
 
 .socials__link {
-  display: block;
+  display: flex;
   width: 46px;
   height: 48px;
-  font-size: 0;
-  background-color: $color-blue;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: $social-background-color;
+  justify-content: center;
+  align-items: center;
+  fill: $social-color;
 
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
+  &:hover {
+    background-color: $social-hover-background-color;
   }
 
-  &--facebook {
-    background-image: url("../img/icon-facebook.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/icon-youtube.svg");
+  &:active {
+    background-color: $social-down-background-color;
+    fill: $social-down-color;
   }
 }

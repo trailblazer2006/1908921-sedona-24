@@ -2,6 +2,8 @@ const mainNav = document.querySelector('.main-nav');
 const btnOpen = document.querySelector('.main-nav__button--open');
 const btnClose = document.querySelector('.main-nav__button--close');
 
+mainNav.classList.remove('main-nav--no-js');
+
 btnOpen.addEventListener('click', function () {
   mainNav.classList.remove('main-nav--closed');
   mainNav.classList.add('main-nav--opened');

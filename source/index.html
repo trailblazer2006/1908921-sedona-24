@@ -11,9 +11,19 @@
       <a class="page-header__logo">
         <img src="img/logotype-mobile.svg" width="102" height="84" alt="HTML Academy: Седона">
       </a>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__button main-nav__button--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <button class="main-nav__button main-nav__button--close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+      <nav class="main-nav main-nav--closed main-nav--no-js">
+        <button class="main-nav__button main-nav__button--open" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <svg width="22" height="22">
+            <use href="img/icon-menu.svg#icon"></use>
+          </svg>
+        </button>
+        <button class="main-nav__button main-nav__button--close" type="button">
+          <span class="visually-hidden">Закрыть меню</span>
+          <svg width="22" height="22">
+            <use href="img/icon-cross.svg#icon"></use>
+          </svg>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
             <a>
@@ -45,7 +55,7 @@
         <img class="banner__image" src="img/text-index.svg" width="282" height="214" alt="welcome">
       </section>
       <section class="introduction">
-        <h2 class="introduction__title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего</h2>
+        <h2 class="introduction__title">СЕДОНА — небольшой<br> городок в АРИЗОНЕ, зАСЛУЖИвающий большего</h2>
         <p class="introduction__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
       <section class="advantages advantages--real-town">
@@ -63,7 +73,7 @@
           </li>
           <li class="features__item features__item--food">
             <h3 class="features__title">ЕДА</h3>
-            <div class="features__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</div>
+            <div class="features__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,<br> Вы НЕ разочаруетесь!</div>
           </li>
         </ul>
       </section>
@@ -78,15 +88,15 @@
       </section>
       <section class="advantages advantages--beautiful-road">
         <h2 class="advantages__title">КРАСИВАЯ ДОРОГА</h2>
-        <div class="advantages__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</div>
+        <div class="advantages__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА<br> совсем НЕ СКУЧНО!</div>
       </section>
       <section class="advantages advantages--few-tourists">
         <h2 class="advantages__title">МАЛО ТУРИСТОВ</h2>
-        <div class="advantages__description">Большинство едет в гранд каньон и толпится там</div>
+        <div class="advantages__description">Большинство едет в гранд каньон<br> и толпится там</div>
       </section>
       <section class="find-hotel">
         <h2 class="find-hotel__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-        <p class="find-hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p class="find-hotel__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="find-hotel__button" href="find-hotel.html">НАЙТИ гостиницу</a>
       </section>
       <section class="map">
@@ -98,18 +108,38 @@
       <span class="page-footer__title">#visitSEDONA</span>
       <ul class="page-footer__socials-list socials">
         <li class="socials__item">
-          <a class="socials__link socials__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
+          <a class="socials__link" href="https://twitter.com/">
+            <span class="visually-hidden">Мы в Твиттере</span>
+            <svg width="18" height="15">
+              <use href="img/icon-twitter.svg#icon"></use>
+            </svg>
+          </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link socials__link--facebook" href="https://www.facebook.com">Мы в Фейсбуке</a>
+          <a class="socials__link" href="https://www.facebook.com">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+            <svg width="9" height="19">
+              <use href="img/icon-facebook.svg#icon"></use>
+            </svg>
+          </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link socials__link--youtube" href="https://www.youtube.com">Мы в Ютубе</a>
+          <a class="socials__link" href="https://www.youtube.com">
+            <span class="visually-hidden">Мы в Ютубе</span>
+            <svg width="20" height="14">
+              <use href="img/icon-youtube.svg#icon"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="page-footer__copyright">
         <b class="page-footer__copyright-text">Разработано</b>
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg width="27" height="34" viewBox="0 0 60 60">
+            <use href="img/htmlacademy.svg#icon"></use>
+          </svg>
+        </a>
       </div>
     </footer>
     <script type="application/javascript" src="js/app.js"></script>
