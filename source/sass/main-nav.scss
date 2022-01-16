@@ -136,6 +136,10 @@
   }
 
   .main-nav--no-js {
+    position: relative;
+    z-index: 1;
+    padding-top: 84px;
+
     .main-nav__button {
       display: none;
     }
