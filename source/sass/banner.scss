@@ -7,7 +7,7 @@
   background-size: cover;
   grid-column: 1 / -1;
   width: 100%;
-  height: 164px;
+  height: 389px;
   background-image: url("../img/back-mobile.jpg");
 
   @media (min-resolution: 2dppx) {
@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    height: 290px;
+    height: 518px;
     background-image: url("../img/back-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
