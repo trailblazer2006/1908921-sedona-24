@@ -47,31 +47,17 @@
     margin: auto;
     width: 282px;
     height: 214px;
+    padding-top: 90px;
 
     @media (min-width: $tablet-width) {
       width: 460px;
       height: 350px;
     }
   }
-
-  .banner__image {
-    padding-top: 90px;
-  }
 }
 
 .page-catalog,
 .page-form {
-  .banner__image {
-    margin: auto;
-    width: 229px;
-    height: 39px;
-
-    @media (min-width: $tablet-width) {
-      width: 460px;
-      height: 78px;
-    }
-  }
-
   .banner {
     height: 164px;
 
@@ -81,9 +67,14 @@
   }
 
   .banner__image {
+    margin: auto;
+    width: 229px;
+    height: 39px;
     padding-top: 50px;
 
     @media (min-width: $tablet-width) {
+      width: 460px;
+      height: 78px;
       padding-top: 95px;
     }
   }
