@@ -1,8 +1,9 @@
 .page-header {
-  height: 56px;
+  min-height: 56px;
   position: relative;
 }
 
+// todo: ask mentor how fix issue with no js menu
 .page-header__logo {
   position: absolute;
   transform: translateX(-50%);

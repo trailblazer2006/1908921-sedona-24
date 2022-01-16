@@ -1,11 +1,38 @@
 $color-black: #000000;
 $color-white: #ffffff;
 $color-blue: #81b3d2;
+$color-blue-darker: #669ec0;
+$color-dark-blue: #5496bd;
 $color-grey: #eeeeee;
 $color-grey-darker: #d6d6d6;
+$color-brown: #766357;
 $color-border: #e5e5e5;
 $color-primary: #333333;
 $color-controls: #f2f2f2;
 
 $tablet-width: 768px;
 $desktop-width: 1280px;
+$mobile-width-only: $tablet-width - 1;
+
+$mobile-menu-item-color: $color-white;
+$mobile-menu-item-background-color: $color-blue;
+$mobile-menu-item-hover-background-color: $color-blue-darker;
+$mobile-menu-item-down-color: rgba($color-white, 0.3);
+$mobile-menu-item-down-background-color: $color-dark-blue;
+
+$main-menu-item-color: $color-black;
+$main-menu-item-hover-color: $color-blue;
+$main-menu-item-down-color: rgba($color-white, 0.3);
+$main-menu-item-active-color: $color-brown;
+
+$blue-button-color: $color-white;
+$blue-button-background-color: $color-blue;
+$blue-button-hover-background-color: $color-blue-darker;
+$blue-button-down-color: rgba($color-white, 0.3);
+$blue-button-down-background-color: $color-dark-blue;
+
+$social-color: $color-white;
+$social-background-color: $color-blue;
+$social-hover-background-color: $color-blue-darker;
+$social-down-color: rgba($color-white, 0.3);
+$social-down-background-color: $color-dark-blue;

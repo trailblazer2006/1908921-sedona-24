@@ -139,18 +139,6 @@
   text-transform: uppercase;
   padding-top: 10px;
 
-  &::before {
-    display: block;
-    content: url("../img/like-icon.svg");
-    width: 23px;
-    height: 21px;
-    margin-right: 14px;
-
-    @media (min-width: $tablet-width) {
-      content: url("../img/like-icon-tablet.svg");
-    }
-  }
-
   @media (min-width: $tablet-width) {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -159,5 +147,19 @@
 
   @media (min-width: $desktop-width) {
     color: $color-white;
+  }
+}
+
+.gallery__likes-button {
+  border: 0 none;
+  width: 23px;
+  height: 21px;
+  margin-right: 14px;
+  background-color: unset;
+  background-image: url("../img/like-icon.svg");
+  background-position: center;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/like-icon-desktop.svg");
   }
 }
