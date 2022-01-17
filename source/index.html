@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg" width="102" height="84" alt="HTML Academy: Седона">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="img/logotype-mobile.svg" width="102" height="84" alt="HTML Academy: Седона">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="main-nav__button main-nav__button--open" type="button">
@@ -61,7 +69,13 @@
       <section class="advantages advantages--real-town">
         <h2 class="advantages__title">НАСТОЯЩИЙ ГОРОДОК</h2>
         <div class="advantages__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</div>
-        <img class="advantages__image" src="img/photo-city@1x1.jpg" width="320" height="260" alt="city photo">
+        <div class="advantages__image-wrapper">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+            <img class="advantages__image" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg 2x" width="320" height="260" alt="city photo">
+          </picture>
+        </div>
         <ul class="advantages__features-list features">
           <li class="features__item features__item--accommodation">
             <h3 class="features__title">Жилье</h3>
@@ -80,7 +94,13 @@
       <section class="advantages advantages--devils-bridge">
         <h2 class="advantages__title">ТАМ ЕСТЬ Мост дьявола</h2>
         <div class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</div>
-        <img class="advantages__image" src="img/photo-bridge@1x1.jpg" width="320" height="260" alt="bridge photo">
+        <div class="advantages__image-wrapper">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="advantages__image" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg 2x" width="320" height="260" alt="bridge photo">
+          </picture>
+        </div>
       </section>
       <section class="advantages advantages--compact-area">
         <h2 class="advantages__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h2>

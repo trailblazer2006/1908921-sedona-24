@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg" width="102" height="84" alt="HTML Academy: Седона">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+          <img src="img/logotype-mobile.svg" width="102" height="84" alt="HTML Academy: Седона">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="main-nav__button main-nav__button--open" type="button">
