@@ -32,7 +32,7 @@
 }
 
 .page-footer__copyright {
-  margin-top: 40px;
+  margin-top: 37px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,8 +50,9 @@
 
 .page-footer__copyright-link {
   display: block;
-  width: 27px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
   fill: $color-black;
 
   &:hover {
