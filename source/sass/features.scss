@@ -15,13 +15,16 @@
 .features__item {
   display: grid;
   grid-template-columns: 49px auto;
-  padding-top: 26px;
+  padding-top: 15px;
+  align-items: flex-end;
 
-  &:last-child {
-    padding-bottom: 35px;
+  @media (max-width: $mobile-width-only) {
+    &:first-child {
+      padding-top: 25px;
+    }
 
-    @media (min-width: $tablet-width) {
-      padding-bottom: 0;
+    &:last-child {
+      padding-bottom: 38px;
     }
   }
 
@@ -32,7 +35,11 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 100%;
-    grid-template-rows: 75px auto auto;
+    grid-template-rows: 75px 78px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 216px;
   }
 }
 
@@ -44,6 +51,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    font-size: 21px;
     text-align: center;
     padding: 26px 0 26px;
   }
@@ -56,18 +64,36 @@
   line-height: 21px;
   text-transform: uppercase;
   grid-column: 2 / -1;
+  padding-top: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    grid-column: unset;
+    grid-column: 1;
+    padding-top: 0;
     text-align: center;
-    padding-bottom: 59px;
+    align-self: flex-start;
   }
 }
 
 .features__item--accommodation {
   .features__description {
     @media (min-width: $tablet-width) {
-      padding: 0 36px 59px 35px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 50px;
+      padding-right: 50px;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -87,8 +113,19 @@
 
 .features__item--souvenirs {
   .features__description {
+    br {
+      display: none;
+    }
+
     @media (min-width: $tablet-width) {
-      padding: 0 31px 59px 32px;
+      padding-left: 31px;
+      padding-right: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      br {
+        display: inline;
+      }
     }
   }
 
@@ -113,7 +150,8 @@
 .features__item--food {
   .features__description {
     @media (min-width: $tablet-width) {
-      padding: 0 38px 59px;
+      padding-left: 38px;
+      padding-right: 38px;
     }
   }
 

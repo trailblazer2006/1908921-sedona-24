@@ -5,6 +5,10 @@
   position: absolute;
   z-index: 2;
 
+  @media (max-width: $mobile-width-only) {
+    background-color: $mobile-menu-item-background-color;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
@@ -27,13 +31,16 @@
 
     &:last-child a {
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
-      padding-bottom: 0;
+      margin-bottom: 0;
 
-      // todo: ask mentor how to do better
       &::after {
         content: "";
         display: block;
-        height: 5px;
+        height: 7px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
       }
     }
@@ -56,8 +63,8 @@
   text-decoration: none;
 
   @media (max-width: $mobile-width-only) {
+    margin-bottom: 1px;
     color: $mobile-menu-item-color;
-    background-color: $mobile-menu-item-background-color;
     box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
     &:hover {
@@ -71,6 +78,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 15px;
     color: $main-menu-item-color;
 
     &:hover {
@@ -90,19 +98,22 @@
 .main-nav__button {
   position: absolute;
   z-index: 3;
-  top: 17px;
-  right: 17px;
-  width: 22px;
-  height: 22px;
+  top: 16px;
   border: 0 none;
   background-color: unset;
 
   &--open {
     fill: $color-blue;
+    width: 23px;
+    height: 22px;
+    right: 27px;
   }
 
   &--close {
     fill: $color-white;
+    width: 23px;
+    height: 23px;
+    right: 25px;
   }
 
   &:hover {
