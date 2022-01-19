@@ -6,6 +6,14 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .player__image {

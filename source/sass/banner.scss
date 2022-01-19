@@ -69,10 +69,14 @@
 .page-catalog,
 .page-form {
   .banner {
-    height: 164px;
+    height: 158px;
 
     @media (min-width: $tablet-width) {
       height: 290px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 302px;
     }
   }
 

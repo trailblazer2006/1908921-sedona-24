@@ -90,20 +90,19 @@
     @media (min-width: $desktop-width) {
       padding-left: 50px;
       padding-right: 50px;
-
-      br {
-        display: none;
-      }
     }
   }
 
   &::before {
-    content: url("../img/icon-house.svg");
+    content: "";
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 39px;
     height: 37px;
 
     @media (min-width: $tablet-width) {
-      content: url("../img/icon-house-tablet.svg");
       width: 75px;
       height: 72px;
       margin: 0 auto;
@@ -113,13 +112,13 @@
 
 .features__item--souvenirs {
   .features__description {
-    br {
-      display: none;
-    }
-
     @media (min-width: $tablet-width) {
       padding-left: 31px;
       padding-right: 32px;
+
+      br {
+        display: none;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -130,12 +129,15 @@
   }
 
   &::before {
-    content: url("../img/icon-gift.svg");
+    content: "";
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 32px;
     height: 38px;
 
     @media (min-width: $tablet-width) {
-      content: url("../img/icon-gift-tablet.svg");
       width: 64px;
       height: 75px;
       margin: 0 auto;
@@ -156,12 +158,15 @@
   }
 
   &::before {
-    content: url("../img/icon-burger.svg");
+    content: "";
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 40px;
     height: 35px;
 
     @media (min-width: $tablet-width) {
-      content: url("../img/icon-burger-tablet.svg");
       width: 76px;
       height: 68px;
       margin: 0 auto;
