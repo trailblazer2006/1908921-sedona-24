@@ -16,6 +16,15 @@
   text-align: center;
   text-transform: uppercase;
   padding: 0 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 28px;
+  }
 }
 
 .video__description {
@@ -28,4 +37,9 @@
   padding: 24px 38px 33px;
   max-width: 445px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 33px;
+    padding-bottom: 81px;
+  }
 }
