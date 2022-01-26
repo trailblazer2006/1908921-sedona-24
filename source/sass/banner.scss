@@ -10,24 +10,48 @@
   height: 389px;
   background-image: url("../img/back-mobile.jpg");
 
+  @supports (background-image: -webkit-image-set(url('../img/back-mobile.webp') 1x)) {
+    background-image: -webkit-image-set(url('../img/back-mobile.webp') 1x)
+  }
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/back-mobile@2x.jpg");
+
+    @supports (background-image: -webkit-image-set(url('../img/back-mobile@2x.webp') 1x)) {
+      background-image: -webkit-image-set(url('../img/back-mobile@2x.webp') 1x)
+    }
   }
 
   @media (min-width: $tablet-width) {
     height: 518px;
     background-image: url("../img/back-tablet.jpg");
 
+    @supports (background-image: -webkit-image-set(url('../img/back-tablet.webp') 1x)) {
+      background-image: -webkit-image-set(url('../img/back-tablet.webp') 1x)
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-tablet@2x.jpg");
+
+      @supports (background-image: -webkit-image-set(url('../img/back-tablet@2x.webp') 2x)) {
+        background-image: -webkit-image-set(url('../img/back-tablet@2x.webp') 2x)
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
     background-image: url("../img/back-desktop.jpg");
 
+    @supports (background-image: -webkit-image-set(url('../img/back-desktop.webp') 1x)) {
+      background-image: -webkit-image-set(url('../img/back-desktop.webp') 1x)
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
+
+      @supports (background-image: -webkit-image-set(url('../img/back-desktop@2x.webp') 2x)) {
+        background-image: -webkit-image-set(url('../img/back-desktop@2x.webp') 2x)
+      }
     }
   }
 
