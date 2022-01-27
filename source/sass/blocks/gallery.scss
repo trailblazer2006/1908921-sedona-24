@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables";
 
 .gallery {
   padding-top: 32px;
@@ -165,10 +165,10 @@
   height: 21px;
   margin-right: 14px;
   background-color: unset;
-  background-image: url("../img/like-icon.svg");
+  background-image: url("../../img/like-icon.svg");
   background-position: center;
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/like-icon-desktop.svg");
+    background-image: url("../../img/like-icon-desktop.svg");
   }
 }

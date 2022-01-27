@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables";
 
 .review {
   padding-top: 36px;
@@ -175,11 +175,11 @@
   background-position: center;
 
   &--tel {
-    background-image: url("../img/phone.svg");
+    background-image: url("../../img/phone.svg");
   }
 
   &--email {
-    background-image: url("../img/mail.svg");
+    background-image: url("../../img/mail.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -267,7 +267,7 @@
   }
 
   &:checked + .review__label::before {
-    background-image: url("../img/tick.svg");
+    background-image: url("../../img/tick.svg");
   }
 }
 

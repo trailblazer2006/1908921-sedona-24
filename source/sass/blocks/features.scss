@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables";
 
 .features {
   background-color: $color-white;
@@ -95,7 +95,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/icon-house.svg");
+    background-image: url("../../img/icon-house.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -130,7 +130,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/icon-gift.svg");
+    background-image: url("../../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,7 +159,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/icon-burger.svg");
+    background-image: url("../../img/icon-burger.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
