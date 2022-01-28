@@ -32,14 +32,14 @@
 }
 
 .review__text {
+  margin: 0 auto;
+  padding: 28px 8px 16px;
+  max-width: 440px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: $color-primary;
-  margin: 0 auto;
-  padding: 28px 8px 16px;
-  max-width: 440px;
 
   @media (min-width: $tablet-width) {
     padding-top: 33px;
@@ -71,11 +71,14 @@
 }
 
 .review__fieldset {
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   border-top: 1px solid $color-border;
+  border-left: 0 none;
+  border-bottom: 0 none;
+  border-right: 0 none;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
     border-top: 1px solid $color-grey-darker;
   }
 }
@@ -91,6 +94,14 @@
   text-align: center;
   text-transform: uppercase;
 
+  @media (max-width: $mobile-width-only) {
+    float: left;
+
+    + * {
+      clear: both;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
     float: none;
@@ -103,7 +114,14 @@
 }
 
 .review__list {
-  padding-bottom: 15px;
+  margin: 0;
+  padding: 0 0 15px;
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;

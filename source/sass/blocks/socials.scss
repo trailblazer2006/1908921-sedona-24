@@ -5,6 +5,11 @@
   list-style: none;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
 }
 
 .socials__item:not(:last-child) {

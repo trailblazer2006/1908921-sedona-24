@@ -8,6 +8,7 @@
 }
 
 .advantages__title {
+  margin: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -51,6 +52,7 @@
 }
 
 .advantages__image {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
