@@ -90,7 +90,7 @@
 .gallery__post-wrapper {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: auto 90px;
+    grid-template-columns: auto 85px;
     grid-template-rows: auto auto;
     align-items: center;
   }
@@ -167,6 +167,10 @@
   background-color: unset;
   background-image: url("../../img/like-icon.svg");
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
 
   @media (min-width: $desktop-width) {
     background-image: url("../../img/like-icon-desktop.svg");
