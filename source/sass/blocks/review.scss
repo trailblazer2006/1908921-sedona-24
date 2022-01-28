@@ -58,11 +58,13 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
     padding-left: 60px;
     padding-right: 60px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -120,7 +122,7 @@
 }
 
 .review__label--full {
-  @media (max-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
@@ -128,7 +130,7 @@
 .review__label--short {
   display: none;
 
-  @media (max-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     display: inline;
   }
 }
@@ -503,7 +505,7 @@
 
   @media (min-width: $desktop-width) {
     .review__legend {
-      text-align: center;
+      margin-left: 80px;
     }
 
     .review__item {
