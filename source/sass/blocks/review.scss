@@ -209,25 +209,30 @@
   }
 }
 
+
+/* radio button input[type="radio"] */
 .review__radio {
   position: absolute;
   z-index: -1;
   opacity: 0;
 
-  +
-  .review__label {
-    display: flex;
+  /* label associated with radio button */
+  + .review__label {
+    display: inline-flex;
     align-items: center;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
+    user-select: none;
 
+    /* creating pseudo-element before in label */
     &::before {
       content: "";
+      display: inline-block;
+      margin-right: 26px;
       width: 24px;
       height: 24px;
-      margin-right: 26px;
       background-color: $color-controls;
       border: 15px solid $color-controls;
       border-radius: 50%;
@@ -238,80 +243,96 @@
     }
   }
 
-  &:checked + .review__label::before {
-    background-color: $color-primary;
-  }
-}
-
-.review__item:hover .review__radio {
-  +
-  .review__label::before {
+  /* hovered radio button */
+  &:not(:checked) + .review__label:hover::before {
     background-color: $color-border;
     border-color: $color-border;
   }
 
+  /* focused radio button */
+  &:focus + .review__label::before {
+    box-shadow: 0 0 0 3px $color-border;
+  }
+
+  /* radio button in the checked state */
   &:checked + .review__label::before {
     background-color: $color-primary;
+  }
+
+  /* hovered radio button in the checked state */
+  &:checked + .review__label:hover::before {
+    background-color: $color-primary;
+    border-color: $color-border;
   }
 }
 
 .review__item:active .review__radio {
-  +
-  .review__label::before {
+  /* active radio button (when clicked) */
+  + .review__label::before {
     background-color: #d5d5d5;
     border-color: #d5d5d5;
   }
 
+  /* active radio button (when clicked) in the checked state */
   &:checked + .review__label::before {
     background-color: rgba($color-primary, 0.3);
   }
 }
 
+/* checkbox input[type="checkbox"] */
 .review__checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
 
-  +
-  .review__label {
-    display: flex;
+  /* label associated with checkbox */
+  + .review__label {
+    display: inline-flex;
     align-items: center;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
+    user-select: none;
 
+    /* creating pseudo-element before in label */
     &::before {
       content: "";
+      display: inline-block;
+      margin-right: 26px;
       width: 55px;
       height: 55px;
-      margin-right: 26px;
       background-color: $color-controls;
       background-position: center;
       background-repeat: no-repeat;
+      border-radius: 5px;
     }
   }
 
+  /* hovered checkbox */
+  + .review__label:hover::before {
+    background-color: $color-border;
+  }
+
+  /* focused checkbox */
+  &:focus + .review__label::before {
+    box-shadow: 0 0 0 3px $color-border;
+  }
+
+  /* checkbox in the checked state */
   &:checked + .review__label::before {
     background-image: url("../../img/tick.svg");
   }
 }
 
-.review__item:hover .review__checkbox {
-  +
-  .review__label::before {
-    background-color: $color-border;
-  }
-}
-
 .review__item:active .review__checkbox {
-  +
-  .review__label::before {
+  /* active checkbox (when clicked) */
+  + .review__label::before {
     background-color: #d5d5d5;
   }
 
+  /* active checkbox (when clicked) in the checked state */
   &:checked + .review__label::before {
-    // todo: ask mentor how to change opacity for tick only
     opacity: 0.3;
   }
 }

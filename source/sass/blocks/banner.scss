@@ -13,7 +13,7 @@
   grid-column: 1 / -1;
   width: 100%;
   height: 389px;
-  background-color: rgb(118,144,163);
+  background-color: rgb(118, 144, 163);
   background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
@@ -30,7 +30,7 @@
 
   @media (min-width: $tablet-width) {
     height: 518px;
-    background-color: rgb(117,143,164);
+    background-color: rgb(117, 143, 164);
     background-image: url("../../img/back-tablet.jpg");
 
     @include webpBackgroundImage("../img/back-tablet.webp", 1x);
@@ -43,7 +43,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: rgb(109,135,156);
+    background-color: rgb(109, 135, 156);
     background-image: url("../../img/back-desktop.jpg");
 
     @include webpBackgroundImage("../img/back-desktop.webp", 1x);
