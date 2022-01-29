@@ -184,6 +184,10 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 7px;
+  }
 }
 
 .review__icon {
@@ -205,7 +209,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    bottom: 12px;
+    bottom: 17px;
   }
 }
 
@@ -364,7 +368,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     order: 6;
-    padding-top: 53px;
+    padding-top: 55px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -497,7 +501,7 @@
     }
 
     .review__item {
-      padding: 6px 0 12px;
+      padding: 6px 0 17px;
     }
   }
 
@@ -525,7 +529,7 @@
 
 .review__fieldset--impression {
   .review__item {
-    padding-bottom: 13px;
+    padding-bottom: 8px;
   }
 
   @media (min-width: $tablet-width) {
@@ -571,7 +575,7 @@
   }
 
   .review__item {
-    padding-bottom: 23px;
+    padding-bottom: 18px;
   }
 
   @media (min-width: $tablet-width) {
@@ -581,8 +585,8 @@
 
     .review__legend {
       width: 308px;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: 50px;
+      padding-right: 50px;
       margin-top: 50px;
     }
 
@@ -597,7 +601,7 @@
     .review__item {
       width: 50%;
       padding-left: 0;
-      padding-bottom: 32px;
+      padding-bottom: 25px;
       padding-right: 0;
     }
   }
@@ -633,8 +637,8 @@
     padding-right: 0;
 
     .review__legend {
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: 75px;
+      padding-right: 75px;
     }
   }
 
