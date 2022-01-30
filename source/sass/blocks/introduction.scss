@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables";
 
 .introduction {
   grid-column: 1 / -1;
@@ -16,14 +16,15 @@
 }
 
 .introduction__title {
+  margin: 0;
+  padding-top: 32px;
+  padding-left: 12px;
+  padding-right: 18px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 32px;
-  padding-left: 12px;
-  padding-right: 18px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
@@ -40,14 +41,13 @@
 }
 
 .introduction__description {
+  margin: 0;
+  padding: 32px 18px 0 17px;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 32px;
-  padding-left: 17px;
-  padding-right: 18px;
 
   @media (min-width: $desktop-width) {
     padding-left: 0;

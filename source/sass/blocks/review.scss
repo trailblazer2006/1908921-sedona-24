@@ -1,7 +1,15 @@
-@import "variables.scss";
+@import "../variables";
 
 .review {
   padding-top: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 28px;
+  }
 }
 
 .review__title {
@@ -12,17 +20,31 @@
   text-transform: uppercase;
   margin: 0 auto;
   max-width: 434px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    padding-top: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
+  }
 }
 
 .review__text {
+  margin: 0 auto;
+  padding: 28px 8px 16px;
+  max-width: 440px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: $color-primary;
-  margin: 0 auto;
-  padding: 36px 8px 16px;
-  max-width: 440px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 33px;
+    padding-bottom: 85px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 60px;
@@ -36,22 +58,34 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 
 .review__fieldset {
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   border-top: 1px solid $color-border;
+  border-left: 0 none;
+  border-bottom: 0 none;
+  border-right: 0 none;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
     border-top: 1px solid $color-grey-darker;
   }
 }
 
 .review__legend {
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px 0 19px;
   width: 100%;
   font-weight: bold;
@@ -60,15 +94,34 @@
   text-align: center;
   text-transform: uppercase;
 
+  @media (max-width: $mobile-width-only) {
+    float: left;
+
+    + * {
+      clear: both;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
     float: none;
     width: auto;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .review__list {
-  padding-bottom: 15px;
+  margin: 0;
+  padding: 0 0 15px;
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
@@ -77,7 +130,7 @@
 
 .review__item {
   position: relative;
-  padding: 10px 0;
+  padding: 2px 0 18px;
 }
 
 .review__label {
@@ -88,13 +141,28 @@
   white-space: nowrap;
 }
 
+.review__label--full {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.review__label--short {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
 .review__input,
 .review__tel,
 .review__email {
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  padding: 18px 22px 14px;
+  padding: 18px 18px 14px 22px;
   color: $color-black;
   background-color: $color-controls;
   border: 0 none;
@@ -115,12 +183,17 @@
   padding-right: 58px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 7px;
+  }
 }
 
 .review__icon {
   position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 5px;
   width: 58px;
   height: 58px;
   background-repeat: no-repeat;
@@ -128,109 +201,142 @@
   background-position: center;
 
   &--tel {
-    background-image: url("../img/phone.svg");
+    background-image: url("../../img/phone.svg");
   }
 
   &--email {
-    background-image: url("../img/mail.svg");
+    background-image: url("../../img/mail.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    bottom: 17px;
   }
 }
 
-.review__radio {
-  display: none;
 
-  +
-  .review__label {
-    display: flex;
+/* radio button input[type="radio"] */
+.review__radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  /* label associated with radio button */
+  + .review__label {
+    display: inline-flex;
     align-items: center;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
+    user-select: none;
 
+    /* creating pseudo-element before in label */
     &::before {
       content: "";
-      width: 18px;
-      height: 18px;
+      display: inline-block;
       margin-right: 26px;
+      width: 24px;
+      height: 24px;
       background-color: $color-controls;
       border: 15px solid $color-controls;
       border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        margin-right: 21px;
+      }
     }
   }
 
-  &:checked + .review__label::before {
-    background-color: $color-primary;
-  }
-}
-
-.review__item:hover .review__radio {
-  +
-  .review__label::before {
+  /* hovered radio button */
+  &:not(:checked) + .review__label:hover::before {
     background-color: $color-border;
     border-color: $color-border;
   }
 
+  /* focused radio button */
+  &:focus + .review__label::before {
+    box-shadow: 0 0 0 3px $color-border;
+  }
+
+  /* radio button in the checked state */
   &:checked + .review__label::before {
     background-color: $color-primary;
+  }
+
+  /* hovered radio button in the checked state */
+  &:checked + .review__label:hover::before {
+    background-color: $color-primary;
+    border-color: $color-border;
   }
 }
 
 .review__item:active .review__radio {
-  +
-  .review__label::before {
+  /* active radio button (when clicked) */
+  + .review__label::before {
     background-color: #d5d5d5;
     border-color: #d5d5d5;
   }
 
+  /* active radio button (when clicked) in the checked state */
   &:checked + .review__label::before {
     background-color: rgba($color-primary, 0.3);
   }
 }
 
+/* checkbox input[type="checkbox"] */
 .review__checkbox {
-  display: none;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 
-  +
-  .review__label {
-    display: flex;
+  /* label associated with checkbox */
+  + .review__label {
+    display: inline-flex;
     align-items: center;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
+    user-select: none;
 
+    /* creating pseudo-element before in label */
     &::before {
       content: "";
-      width: 48px;
-      height: 48px;
+      display: inline-block;
       margin-right: 26px;
+      width: 55px;
+      height: 55px;
       background-color: $color-controls;
       background-position: center;
       background-repeat: no-repeat;
+      border-radius: 5px;
     }
   }
 
-  &:checked + .review__label::before {
-    background-image: url("../img/tick.svg");
-  }
-}
-
-.review__item:hover .review__checkbox {
-  +
-  .review__label::before {
+  /* hovered checkbox */
+  + .review__label:hover::before {
     background-color: $color-border;
+  }
+
+  /* focused checkbox */
+  &:focus + .review__label::before {
+    box-shadow: 0 0 0 3px $color-border;
+  }
+
+  /* checkbox in the checked state */
+  &:checked + .review__label::before {
+    background-image: url("../../img/tick.svg");
   }
 }
 
 .review__item:active .review__checkbox {
-  +
-  .review__label::before {
+  /* active checkbox (when clicked) */
+  + .review__label::before {
     background-color: #d5d5d5;
   }
 
+  /* active checkbox (when clicked) in the checked state */
   &:checked + .review__label::before {
-    // todo: ask mentor how to change opacity for tick only
     opacity: 0.3;
   }
 }
@@ -242,31 +348,34 @@
   line-height: 26px;
   width: 100%;
   height: 160px;
-  padding: 13px 21px 29px 23px;
+  padding: 13px 21px 29px;
   border: 0 none;
   color: $color-black;
   background-color: $color-controls;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    margin-top: 55px;
+    margin-top: 41px;
+    padding-top: 18px;
   }
 }
 
 .review__buttons {
-  padding: 51px 23px 0 19px;
+  padding: 46px 21px 0 19px;
   display: flex;
   align-items: baseline;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     order: 6;
+    padding-top: 55px;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .review__button {
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -288,6 +397,11 @@
 
   @media (min-width: $tablet-width) {
     width: 324px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 480px;
   }
 }
 
@@ -297,17 +411,24 @@
 
   @media (min-width: $tablet-width) {
     display: inline;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
 .review__fieldset--introduction {
+  .review__list {
+    padding-bottom: 5px;
+  }
+
   .review__item {
     display: flex;
     align-items: center;
   }
 
   .review__label {
-    margin-right: 20px;
+    margin-right: 14px;
   }
 
   .review__input {
@@ -325,14 +446,45 @@
       margin-left: 58px;
     }
 
+    .review__list {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
     .review__item {
+      padding-top: 4px;
       padding-left: 58px;
       padding-right: 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .review__legend {
+      margin-left: 80px;
+    }
+
+    .review__list {
+      padding-left: 22px;
     }
   }
 }
 
 .review__fieldset--contacts {
+  padding-bottom: 5px;
+
+  .review__legend {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .review__item {
+    padding-bottom: 5px;
+  }
+
   .review__label {
     margin-left: 22px;
   }
@@ -340,26 +492,27 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     order: 3;
-    margin-top: 72px;
+    margin-top: 50px;
 
     .review__legend {
+      padding-top: 20px;
       padding-left: 60px;
       padding-right: 60px;
     }
 
     .review__item {
-      padding-left: 0;
-      padding-right: 0;
+      padding: 6px 0 17px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 50px;
+    margin-top: 45px;
+    padding-top: 45px;
 
     .review__list {
       display: grid;
       grid-template-columns: auto 50%;
-      grid-column-gap: 40px;
+      grid-column-gap: 80px;
     }
 
     .review__item {
@@ -368,62 +521,101 @@
     }
 
     .review__label {
-      margin-right: 18px;
+      margin-top: 8px;
       margin-left: 0;
+      margin-right: 18px;
     }
   }
 }
 
 .review__fieldset--impression {
+  .review__item {
+    padding-bottom: 8px;
+  }
+
   @media (min-width: $tablet-width) {
     order: 1;
     border-top: unset;
 
     .review__legend {
-      text-align: left;
+      margin-left: 0;
+    }
+
+    .review__list {
+      padding-top: 47px;
     }
 
     .review__item {
+      padding-top: 11px;
       padding-left: 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .review__legend {
+      margin-left: 80px;
+    }
+
+    .review__item {
+      padding-left: 5px;
     }
   }
 }
 
 .review__fieldset--attractions {
+  .review__legend {
+    padding-top: 15px;
+  }
+
+  .review__list {
+    padding-bottom: 5px;
+  }
+
+  .review__item {
+    padding-bottom: 18px;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     order: 4;
-    margin-top: 75px;
+    margin-top: 30px;
 
     .review__legend {
       width: 308px;
-      padding-left: 60px;
-      padding-right: 60px;
-      margin-top: 50px;
+      padding-top: 0;
+      padding-left: 50px;
+      padding-right: 50px;
     }
 
     .review__list {
       display: flex;
       flex-wrap: wrap;
-      padding-left: 100px;
+      padding-top: 42px;
+      padding-left: 96px;
+      padding-right: 37px;
     }
 
     .review__item {
       width: 50%;
       padding-left: 0;
+      padding-bottom: 25px;
       padding-right: 0;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 50px;
-
     .review__list {
       padding-left: 0;
+      padding-right: 0;
+      justify-content: space-between;
     }
 
     .review__item {
-      width: 25%;
+      width: auto;
     }
   }
 }
@@ -432,16 +624,31 @@
   padding-left: 19px;
   padding-right: 22px;
 
+  .review__legend {
+    padding-bottom: 13px;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     order: 5;
-    margin-top: 75px;
+    margin-top: 20px;
     padding-left: 0;
     padding-right: 0;
 
     .review__legend {
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-top: 15px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+
+    .review__legend {
+      padding-top: 16px;
     }
   }
 }

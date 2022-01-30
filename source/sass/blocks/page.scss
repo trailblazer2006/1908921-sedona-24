@@ -1,0 +1,22 @@
+@import "../variables";
+
+.page__body {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1200px;
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-controls;
+  }
+}
+
+.page__wrapper {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-white;
+    box-shadow: 0 5px 15px $desktop-box-shadow-color;
+  }
+}

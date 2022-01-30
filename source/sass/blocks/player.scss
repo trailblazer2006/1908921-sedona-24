@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "../variables";
 
 .player {
   position: relative;
@@ -17,6 +17,7 @@
 }
 
 .player__image {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -71,11 +72,11 @@
 
   input[type="range"]::-webkit-slider-thumb {
     margin-top: -5px;
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     background: #ffffff;
     border: 0;
-    border-radius: 13px;
+    border-radius: 10px;
     cursor: pointer;
     /* stylelint-disable-next-line property-no-vendor-prefix */
     -webkit-appearance: none;
@@ -94,11 +95,11 @@
   }
 
   input[type="range"]::-moz-range-thumb {
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     background: #ffffff;
     border: 0;
-    border-radius: 13px;
+    border-radius: 10px;
     cursor: pointer;
   }
 
@@ -123,11 +124,11 @@
   }
 
   input[type="range"]::-ms-thumb {
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     background: #ffffff;
     border: 0;
-    border-radius: 13px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 0;
     /*Needed to keep the Edge thumb centred*/

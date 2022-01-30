@@ -1,14 +1,16 @@
-@import "variables.scss";
+@import "../variables";
 
 .features {
+  margin: 0;
+  padding: 0 21px;
+  list-style: none;
   background-color: $color-white;
   color: $color-black;
-  padding: 0 21px;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0;
   }
 }
 
@@ -44,6 +46,7 @@
 }
 
 .features__title {
+  margin: 0;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -95,7 +98,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/icon-house.svg");
+    background-image: url("../../img/icon-house.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -130,7 +133,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/icon-gift.svg");
+    background-image: url("../../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,7 +162,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/icon-burger.svg");
+    background-image: url("../../img/icon-burger.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

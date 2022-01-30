@@ -1,11 +1,10 @@
-@import "variables.scss";
+@import "../variables";
 
 .page-header {
   min-height: 56px;
   position: relative;
 }
 
-// todo: ask mentor how fix issue with no js menu
 .page-header__logo {
   position: absolute;
   transform: translateX(-50%);
@@ -14,6 +13,7 @@
   z-index: 1;
 
   img {
+    display: block;
     width: 102px;
     height: 84px;
 
